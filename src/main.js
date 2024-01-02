@@ -1,13 +1,5 @@
 // DOM elements
-const getModeList = () => {
-    const modeList = []
-    blogDisplayModes.forEach((displayMode) => {
-        displayMode.classList.value.split(' ').forEach((mode) => {
-            if (mode.includes('--')) modeList.push(mode.slice(mode.indexOf('--')+2,mode.length))
-        })
-    })
-    return modeList
-}
+
 const navbarItems = document.querySelectorAll('.navbar__item')
 const burgerMenu = document.querySelector('#hamburger-menu__toggle')
 const burgerMenuItems = document.querySelectorAll('.hamburger-menu__item')
@@ -15,12 +7,19 @@ const body = document.querySelector('body')
 const blogDisplayModes = document.querySelectorAll('.blog__display-mode')
 const blog = document.querySelector('.blog__cards')
 const cards = document.querySelectorAll('.card')
-const displayModeList = getModeList();
+const displayModeList = [];
 
 
 // Funcs
 
-
+// Gets all the possible modes of displaying cards in the blog section
+const getModeList = () => {
+    blogDisplayModes.forEach((displayMode) => {
+        displayMode.classList.value.split(' ').forEach((mode) => {
+            if (mode.includes('--')) displayModeList.push(mode.slice(mode.indexOf('--')+2,mode.length))
+        })
+    })
+}
  // Removes the given class from a list of DOM elements
 const removeElementsClass = (elementList, targetClass) => {
     elementList.forEach((element) => element.classList.remove(`${targetClass}`))
@@ -64,6 +63,14 @@ const onPageLoad = () => {
     blogDisplayMode 
     ? setBlogDisplayMode(blogDisplayMode) 
     : setBlogDisplayMode('grid')
+
+    getModeList()
+
+    for (let i = 0; i < blogDisplayModes.length; i++) {
+        blogDisplayModes[i].addEventListener('click', () => {
+            setBlogDisplayMode(displayModeList[i])
+        })
+    }
 } 
 
 // Event listeners
@@ -85,11 +92,7 @@ burgerMenuItems.forEach((burgerMenuItem) => {
     })
 })
 
-for (let i = 0; i < blogDisplayModes.length; i++) {
-    blogDisplayModes[i].addEventListener('click', () => {
-        setBlogDisplayMode(displayModeList[i])
-    })
-}
+
 
 
 onPageLoad();
