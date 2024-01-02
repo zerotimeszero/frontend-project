@@ -1,0 +1,18 @@
+@import 'global/normalize.css';
+@import 'global/utility.css';
+@import 'blocks/header.css';
+@import 'blocks/navbar.css';
+@import 'blocks/profile.css';
+@import 'blocks/main.css';
+@import 'blocks/info.css';
+@import 'blocks/news.css';
+@import 'blocks/release.css';
+@import 'blocks/message.css';
+@import 'blocks/blog.css';
+@import 'blocks/card.css';
+@import 'blocks/footer.css';
+@import 'blocks/hamburger-menu.css';
+
+.block-scroll{
+    overflow-y: hidden
+}

@@ -1,0 +1,11 @@
+.navbar__list{
+    display: flex;
+    gap: 30px;
+}
+.navbar__item{
+    padding: 8px 12px;
+}
+.navbar__item--active{
+    border-radius: 6px;
+    background-color: #111827;
+}

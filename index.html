@@ -77,12 +77,16 @@
         <section id="blog" class="blog">
           <header class="blog__header">
             <h3 class="blog__title">Интересные статьи</h3>
+            <div class="blog__display">
+              <img class="blog__display-mode blog__display-mode--list" src="src/images/icons/list.svg" alt="Display as a list">
+              <img class="blog__display-mode blog__display-mode--grid" src="src/images/icons/grid.svg" alt="Display as a grid">
+            </div>
             <h4 class="blog__subtitle">Описать, о чем эти статьи, кратко</h4>
           </header>
           <div class="blog__cards">
             <article class="card">
-              <img class="card__image" src="/src/images/1.png" alt="An image of a desk with">
-              <div class="card__body">
+              <img class="card__image" src="src/images/1.png" alt="An image of a desk with">
+              <div class="card__body card__body--lined">
                 <h4 class="card__title">Boost your conversion rate</h4>
                 <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
               </div>
@@ -93,7 +97,7 @@
               </div>
             </article>
             <article class="card">
-              <img class="card__image" src="/src/images/2.png" alt="An image of a desk with a laptop">
+              <img class="card__image" src="src/images/2.png" alt="An image of a desk with a laptop">
               <div class="card__body">
                 <h4 class="card__title">How to use search engine optimization to drive sales</h4>
                 <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.</p>
@@ -105,7 +109,7 @@
               </div>
             </article>
             <article class="card">
-              <img class="card__image" src="/src/images/3.png" alt="An image of a desk with a computer">
+              <img class="card__image" src="src/images/3.png" alt="An image of a desk with a computer">
               <div class="card__body">
                 <h4 class="card__title">Improve your customer experience</h4>
                 <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.</p>
@@ -116,6 +120,7 @@
                 <p class="card__read-time">11 min read</p>
               </div>
             </article>
+            
           </div>
         </section>
       </div>
@@ -123,7 +128,7 @@
     <footer id="footer" class="footer">
       <p class="footer__copyright">© 2022 Институт космических и информационных технологий СФУ</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
