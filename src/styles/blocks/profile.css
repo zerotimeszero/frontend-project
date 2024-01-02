@@ -1,0 +1,11 @@
+.profile{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+@media (width < 1024px) {
+    .profile{
+        gap: 20px;
+    }
+}

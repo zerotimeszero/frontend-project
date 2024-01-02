@@ -1,0 +1,21 @@
+.news{
+    background-color: #FCFFE7;
+    border: 1px solid #000;
+    padding: 30px;
+    min-width: 30%;
+}
+.news__title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23.44px;
+}
+.news__list{
+    padding: 10px 0 0 20px;
+    list-style: disc;
+}
+.news__item{
+    padding-bottom: 5px;
+}
+.news__item--last{
+    padding-bottom: 0;
+}
